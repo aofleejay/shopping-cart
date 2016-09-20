@@ -3,7 +3,7 @@
 class Stock
 {
 	public function getProduct($index = null)
-	{ 
+	{
 		return ($index != null) ? $_SESSION['stock'][$index] : $_SESSION['stock'];
 	}
 
@@ -31,11 +31,11 @@ class Cart
 	{
 		$stock   = new Stock;
 		$product = $stock->getProduct($index);
-		
+
 		if (!empty($product)) {
 			$_SESSION['cart'][] = $product;
 		}
-		
+
 		return $product;
 	}
 
